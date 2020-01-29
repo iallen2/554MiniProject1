@@ -29,6 +29,16 @@ module spart(
     output txd,
     input rxd
     );
+	 
+	 wire enable;
+	 
+	 baud_rate_generator _gen_baudy(
+									.rst(rst), 
+									.clk(clk), 
+									.data_bus(data_bus), 
+									.ioaddr(ioaddr),
+									.enable(enable)
+									);
 
 
 endmodule
