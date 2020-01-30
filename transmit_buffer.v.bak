@@ -1,0 +1,14 @@
+module transmit(
+				input clk,
+				input rst,
+				input enable,
+				input iocs,
+				input iorw,
+				input [1:0]ioaddr,
+				input [7:0]databus,
+				output TxD);
+				
+		reg [7:0]transfer_buffer;
+		
+
+endmodule
