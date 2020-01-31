@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab1_spart
-Thu Jan 30 18:24:21 2020
+Thu Jan 30 19:02:16 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jan 30 18:24:21 2020       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jan 30 19:02:16 2020       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; lab1_spart                                  ;
 ; Top-level Entity Name           ; lab1_spart                                  ;
@@ -172,18 +172,18 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
-; spart.v                          ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v               ;         ;
-; lab1_spart.v                     ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v          ;         ;
-; driver.v                         ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v              ;         ;
-; baud_rate_generator.v            ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v ;         ;
-; transmit_buffer.v                ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v     ;         ;
-; receive_buffer.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v      ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
+; spart.v                          ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/spart.v               ;         ;
+; lab1_spart.v                     ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v          ;         ;
+; driver.v                         ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v              ;         ;
+; baud_rate_generator.v            ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/baud_rate_generator.v ;         ;
+; transmit_buffer.v                ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/transmit_buffer.v     ;         ;
+; receive_buffer.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/receive_buffer.v      ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -379,163 +379,174 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jan 30 18:24:13 2020
+    Info: Processing started: Thu Jan 30 19:02:08 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab1_spart -c lab1_spart
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file spart.v
-    Info (12023): Found entity 1: spart File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 20
+    Info (12023): Found entity 1: spart File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/spart.v Line: 20
 Info (12021): Found 1 design units, including 1 entities, in source file lab1_spart.v
-    Info (12023): Found entity 1: lab1_spart File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 6
+    Info (12023): Found entity 1: lab1_spart File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file driver.v
-    Info (12023): Found entity 1: driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 20
+    Info (12023): Found entity 1: driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v Line: 20
 Info (12021): Found 1 design units, including 1 entities, in source file baud_rate_generator.v
-    Info (12023): Found entity 1: baud_rate_generator File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v Line: 2
+    Info (12023): Found entity 1: baud_rate_generator File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/baud_rate_generator.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file transmit_buffer.v
-    Info (12023): Found entity 1: transmit_buffer File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v Line: 1
+    Info (12023): Found entity 1: transmit_buffer File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/transmit_buffer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file receive_buffer.v
-    Info (12023): Found entity 1: receive_buffer File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at spart.v(38): created implicit net for "data_bus" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 38
-Warning (10236): Verilog HDL Implicit Net warning at receive_buffer.v(49): created implicit net for "data_bus" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v Line: 49
+    Info (12023): Found entity 1: receive_buffer File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/receive_buffer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vga_clk.v
+    Info (12023): Found entity 1: vga_clk File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/vga_clk.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file vga_clk/vga_clk_0002.v
+    Info (12023): Found entity 1: vga_clk_0002 File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/vga_clk/vga_clk_0002.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mul.v
+    Info (12023): Found entity 1: mul File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/mul.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at spart.v(38): created implicit net for "data_bus" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/spart.v Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at receive_buffer.v(49): created implicit net for "data_bus" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/receive_buffer.v Line: 49
 Info (12127): Elaborating entity "lab1_spart" for the top level hierarchy
-Info (12128): Elaborating entity "spart" for hierarchy "spart:spart0" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 71
-Info (12128): Elaborating entity "baud_rate_generator" for hierarchy "spart:spart0|baud_rate_generator:_gen_baudy" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 43
-Warning (10230): Verilog HDL assignment warning at baud_rate_generator.v(24): truncated value with size 32 to match size of target (16) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v Line: 24
-Info (12128): Elaborating entity "transmit_buffer" for hierarchy "spart:spart0|transmit_buffer:_transmit_buffy" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 55
-Warning (10230): Verilog HDL assignment warning at transmit_buffer.v(36): truncated value with size 12 to match size of target (8) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v Line: 36
-Warning (10230): Verilog HDL assignment warning at transmit_buffer.v(55): truncated value with size 32 to match size of target (4) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v Line: 55
-Warning (10230): Verilog HDL assignment warning at transmit_buffer.v(63): truncated value with size 12 to match size of target (8) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v Line: 63
-Info (12128): Elaborating entity "receive_buffer" for hierarchy "spart:spart0|receive_buffer:_vampire_receiver" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 67
-Warning (10036): Verilog HDL or VHDL warning at receive_buffer.v(49): object "data_bus" assigned a value but never read File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v Line: 49
-Warning (10230): Verilog HDL assignment warning at receive_buffer.v(19): truncated value with size 32 to match size of target (4) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v Line: 19
-Warning (10230): Verilog HDL assignment warning at receive_buffer.v(49): truncated value with size 12 to match size of target (1) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v Line: 49
-Info (12128): Elaborating entity "driver" for hierarchy "driver:driver0" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 83
-Warning (10230): Verilog HDL assignment warning at driver.v(41): truncated value with size 32 to match size of target (16) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 41
-Info (10264): Verilog HDL Case Statement information at driver.v(82): all case item expressions in this case statement are onehot File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
-Warning (10240): Verilog HDL Always Construct warning at driver.v(82): inferring latch(es) for variable "nxt_state", which holds its previous value in one or more paths through the always construct File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
-Info (10041): Inferred latch for "nxt_state.100" at driver.v(82) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
-Info (10041): Inferred latch for "nxt_state.011" at driver.v(82) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
-Info (10041): Inferred latch for "nxt_state.010" at driver.v(82) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
-Info (10041): Inferred latch for "nxt_state.000" at driver.v(82) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
+Info (12128): Elaborating entity "spart" for hierarchy "spart:spart0" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 71
+Info (12128): Elaborating entity "baud_rate_generator" for hierarchy "spart:spart0|baud_rate_generator:_gen_baudy" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/spart.v Line: 43
+Warning (10230): Verilog HDL assignment warning at baud_rate_generator.v(24): truncated value with size 32 to match size of target (16) File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/baud_rate_generator.v Line: 24
+Info (12128): Elaborating entity "transmit_buffer" for hierarchy "spart:spart0|transmit_buffer:_transmit_buffy" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/spart.v Line: 55
+Warning (10230): Verilog HDL assignment warning at transmit_buffer.v(36): truncated value with size 12 to match size of target (8) File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/transmit_buffer.v Line: 36
+Warning (10230): Verilog HDL assignment warning at transmit_buffer.v(55): truncated value with size 32 to match size of target (4) File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/transmit_buffer.v Line: 55
+Warning (10230): Verilog HDL assignment warning at transmit_buffer.v(63): truncated value with size 12 to match size of target (8) File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/transmit_buffer.v Line: 63
+Info (12128): Elaborating entity "receive_buffer" for hierarchy "spart:spart0|receive_buffer:_vampire_receiver" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/spart.v Line: 67
+Warning (10036): Verilog HDL or VHDL warning at receive_buffer.v(49): object "data_bus" assigned a value but never read File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/receive_buffer.v Line: 49
+Warning (10230): Verilog HDL assignment warning at receive_buffer.v(19): truncated value with size 32 to match size of target (4) File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/receive_buffer.v Line: 19
+Warning (10230): Verilog HDL assignment warning at receive_buffer.v(49): truncated value with size 12 to match size of target (1) File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/receive_buffer.v Line: 49
+Info (12128): Elaborating entity "driver" for hierarchy "driver:driver0" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 83
+Warning (10230): Verilog HDL assignment warning at driver.v(41): truncated value with size 32 to match size of target (16) File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v Line: 41
+Info (10264): Verilog HDL Case Statement information at driver.v(82): all case item expressions in this case statement are onehot File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at driver.v(82): inferring latch(es) for variable "nxt_state", which holds its previous value in one or more paths through the always construct File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v Line: 82
+Info (10041): Inferred latch for "nxt_state.100" at driver.v(82) File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v Line: 82
+Info (10041): Inferred latch for "nxt_state.011" at driver.v(82) File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v Line: 82
+Info (10041): Inferred latch for "nxt_state.010" at driver.v(82) File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v Line: 82
+Info (10041): Inferred latch for "nxt_state.000" at driver.v(82) File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v Line: 82
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "databus[0]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
-    Warning (13049): Converted tri-state buffer "databus[1]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
-    Warning (13049): Converted tri-state buffer "databus[2]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
-    Warning (13049): Converted tri-state buffer "databus[3]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
-    Warning (13049): Converted tri-state buffer "databus[4]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
-    Warning (13049): Converted tri-state buffer "databus[5]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
-    Warning (13049): Converted tri-state buffer "databus[6]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
-    Warning (13049): Converted tri-state buffer "databus[7]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[0]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[1]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[2]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[3]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[4]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[5]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[6]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[7]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 42
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[3]" and its non-tri-state driver. File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[3]" and its non-tri-state driver. File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "GPIO[5]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[1]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[2]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[4]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[6]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[7]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[8]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[9]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[10]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[11]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[12]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[13]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[14]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[15]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[16]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[17]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[18]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[19]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[20]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[22]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[23]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[25]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[26]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[28]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[29]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[31]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[33]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-    Warning (13040): bidirectional pin "GPIO[35]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-Warning (13012): Latch driver:driver0|nxt_state.000_230 has unsafe behavior File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal driver:driver0|state.010 File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 32
-Warning (13012): Latch driver:driver0|nxt_state.011_210 has unsafe behavior File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal driver:driver0|state.000 File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 32
+    Warning (13040): bidirectional pin "GPIO[5]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[1]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[2]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[4]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[6]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[7]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[8]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[9]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[10]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[11]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[12]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[13]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[14]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[15]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[16]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[17]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[18]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[19]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[20]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[22]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[23]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[25]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[26]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[28]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[29]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[31]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[33]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13040): bidirectional pin "GPIO[35]" has no driver File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
+Warning (13012): Latch driver:driver0|nxt_state.000_230 has unsafe behavior File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal driver:driver0|state.010 File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v Line: 32
+Warning (13012): Latch driver:driver0|nxt_state.011_210 has unsafe behavior File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal driver:driver0|state.000 File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/driver.v Line: 32
 Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "GPIO[3]~synth" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
+    Warning (13010): Node "GPIO[3]~synth" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 33
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 15
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 15
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 15
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 15
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 15
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 15
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 15
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 16
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 16
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 16
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 16
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 16
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 16
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 16
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 17
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 18
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 18
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 18
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 18
-    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 19
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 19
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 20
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 20
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 20
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 20
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 20
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 20
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 20
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 15
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 15
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 15
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 15
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 15
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 15
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 15
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 16
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 16
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 16
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 16
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 16
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 16
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 16
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 17
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 18
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 18
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 18
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 18
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 19
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 19
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 20
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 20
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 20
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 20
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 20
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 20
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 20
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 26
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 26
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 26
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 26
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 26
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 26
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 26
 Info (286030): Timing-Driven Synthesis is running
-Warning (14632): Output pin "LEDR[9]" driven by bidirectional pin "GPIO[5]" cannot be tri-stated File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
+Warning (14632): Output pin "LEDR[9]" driven by bidirectional pin "GPIO[5]" cannot be tri-stated File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 26
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 16 assignments for entity "vga_clk" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_pll -entity vga_clk -sip vga_clk.sip -library lib_vga_clk was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 18.1 -entity vga_clk -sip vga_clk.sip -library lib_vga_clk was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV mwpim -entity vga_clk -sip vga_clk.sip -library lib_vga_clk was ignored
+Warning (20013): Ignored 317 assignments for entity "vga_clk_0002" -- entity does not exist in design
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 14 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 10
-    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 11
-    Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 12
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 23
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 23
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 23
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 29
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 10
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 11
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 12
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 23
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 23
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 23
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.v Line: 29
 Info (21057): Implemented 181 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 52 output pins
     Info (21060): Implemented 36 bidirectional pins
     Info (21061): Implemented 75 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 118 warnings
-    Info: Peak virtual memory: 4875 megabytes
-    Info: Processing ended: Thu Jan 30 18:24:21 2020
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 123 warnings
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Thu Jan 30 19:02:16 2020
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Total CPU time (on all processors): 00:00:17
 
 

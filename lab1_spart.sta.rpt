@@ -1,5 +1,5 @@
 Timing Analyzer report for lab1_spart
-Thu Jan 30 18:25:05 2020
+Thu Jan 30 19:03:00 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -108,7 +108,7 @@ refer to the applicable agreement for further details.
 ;     Processor 2            ;   1.3%      ;
 ;     Processor 3            ;   1.3%      ;
 ;     Processor 4            ;   1.3%      ;
-;     Processor 5            ;   1.2%      ;
+;     Processor 5            ;   1.3%      ;
 ;     Processor 6            ;   1.2%      ;
 +----------------------------+-------------+
 
@@ -118,7 +118,7 @@ refer to the applicable agreement for further details.
 +----------------+--------+--------------------------+
 ; SDC File Path  ; Status ; Read at                  ;
 +----------------+--------+--------------------------+
-; lab1_spart.SDC ; OK     ; Thu Jan 30 18:25:01 2020 ;
+; lab1_spart.SDC ; OK     ; Thu Jan 30 19:02:56 2020 ;
 +----------------+--------+--------------------------+
 
 
@@ -1035,31 +1035,36 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jan 30 18:24:59 2020
+    Info: Processing started: Thu Jan 30 19:02:54 2020
 Info: Command: quartus_sta lab1_spart -c lab1_spart
 Info: qsta_default_script.tcl version: #1
+Warning (20013): Ignored 16 assignments for entity "vga_clk" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_pll -entity vga_clk -sip vga_clk.sip -library lib_vga_clk was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 18.1 -entity vga_clk -sip vga_clk.sip -library lib_vga_clk was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV mwpim -entity vga_clk -sip vga_clk.sip -library lib_vga_clk was ignored
+Warning (20013): Ignored 317 assignments for entity "vga_clk_0002" -- entity does not exist in design
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Warning (335093): The Timing Analyzer is analyzing 4 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Info (332104): Reading SDC File: 'lab1_spart.SDC'
-Warning (332174): Ignored filter at lab1_spart.sdc(15): altera_reserved_tck could not be matched with a port or pin or register or keeper or net or combinational node or node File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 15
-Warning (332049): Ignored create_clock at lab1_spart.sdc(15): Argument <targets> is not an object ID File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 15
-    Info (332050): create_clock -name {altera_reserved_tck} -period 40 {altera_reserved_tck} File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 15
-Warning (332174): Ignored filter at lab1_spart.sdc(16): altera_reserved_tdi could not be matched with a port File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 16
-Warning (332174): Ignored filter at lab1_spart.sdc(16): altera_reserved_tck could not be matched with a clock File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 16
-Warning (332049): Ignored set_input_delay at lab1_spart.sdc(16): Argument <targets> is an empty collection File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 16
-    Info (332050): set_input_delay -clock altera_reserved_tck -clock_fall 3 [get_ports altera_reserved_tdi] File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 16
-Warning (332049): Ignored set_input_delay at lab1_spart.sdc(16): Argument -clock is not an object ID File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 16
-Warning (332174): Ignored filter at lab1_spart.sdc(17): altera_reserved_tms could not be matched with a port File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 17
-Warning (332049): Ignored set_input_delay at lab1_spart.sdc(17): Argument <targets> is an empty collection File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 17
-    Info (332050): set_input_delay -clock altera_reserved_tck -clock_fall 3 [get_ports altera_reserved_tms] File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 17
-Warning (332049): Ignored set_input_delay at lab1_spart.sdc(17): Argument -clock is not an object ID File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 17
-Warning (332174): Ignored filter at lab1_spart.sdc(18): altera_reserved_tdo could not be matched with a port File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 18
-Warning (332049): Ignored set_output_delay at lab1_spart.sdc(18): Argument <targets> is an empty collection File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 18
-    Info (332050): set_output_delay -clock altera_reserved_tck 3 [get_ports altera_reserved_tdo] File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 18
-Warning (332049): Ignored set_output_delay at lab1_spart.sdc(18): Argument -clock is not an object ID File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.sdc Line: 18
+Warning (332174): Ignored filter at lab1_spart.sdc(15): altera_reserved_tck could not be matched with a port or pin or register or keeper or net or combinational node or node File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 15
+Warning (332049): Ignored create_clock at lab1_spart.sdc(15): Argument <targets> is not an object ID File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 15
+    Info (332050): create_clock -name {altera_reserved_tck} -period 40 {altera_reserved_tck} File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 15
+Warning (332174): Ignored filter at lab1_spart.sdc(16): altera_reserved_tdi could not be matched with a port File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 16
+Warning (332174): Ignored filter at lab1_spart.sdc(16): altera_reserved_tck could not be matched with a clock File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 16
+Warning (332049): Ignored set_input_delay at lab1_spart.sdc(16): Argument <targets> is an empty collection File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 16
+    Info (332050): set_input_delay -clock altera_reserved_tck -clock_fall 3 [get_ports altera_reserved_tdi] File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 16
+Warning (332049): Ignored set_input_delay at lab1_spart.sdc(16): Argument -clock is not an object ID File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 16
+Warning (332174): Ignored filter at lab1_spart.sdc(17): altera_reserved_tms could not be matched with a port File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 17
+Warning (332049): Ignored set_input_delay at lab1_spart.sdc(17): Argument <targets> is an empty collection File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 17
+    Info (332050): set_input_delay -clock altera_reserved_tck -clock_fall 3 [get_ports altera_reserved_tms] File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 17
+Warning (332049): Ignored set_input_delay at lab1_spart.sdc(17): Argument -clock is not an object ID File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 17
+Warning (332174): Ignored filter at lab1_spart.sdc(18): altera_reserved_tdo could not be matched with a port File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 18
+Warning (332049): Ignored set_output_delay at lab1_spart.sdc(18): Argument <targets> is an empty collection File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 18
+    Info (332050): set_output_delay -clock altera_reserved_tck 3 [get_ports altera_reserved_tdo] File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 18
+Warning (332049): Ignored set_output_delay at lab1_spart.sdc(18): Argument -clock is not an object ID File: C:/Users/ECE_STUDENT/Desktop/jan-30-yly2/554MiniProject1/lab1_spart.sdc Line: 18
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Warning (332060): Node: driver:driver0|state.000 was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Latch driver:driver0|nxt_state.011_210 is being clocked by driver:driver0|state.000
@@ -1140,9 +1145,9 @@ Info (332146): Worst-case minimum pulse width slack is 9.065
     Info (332119):     9.065               0.000 CLOCK_50 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 5181 megabytes
-    Info: Processing ended: Thu Jan 30 18:25:05 2020
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 5184 megabytes
+    Info: Processing ended: Thu Jan 30 19:03:00 2020
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 
