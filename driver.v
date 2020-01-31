@@ -54,31 +54,34 @@ module driver(
 						      						2'b00; // transmit buffer/receive buffer
 														
 	assign databus = (state == 3'b001) ? db_high: // db high
-						  (state == 3'b111) ? db_low: // db low
-						  (state == 3'b011) ? databus_reg: //transmit
+		         (state == 3'b100) ? db_low: // db low
+			 (state == 3'b011) ? databus_reg: //transmit
 													 8'hzz; 
 	
 	
 	always @(posedge rst or posedge clk) begin
 		if(rst) begin
-			state = 3'b001;
+			state <= 3'b001;
 		end
 		else begin
-			state = nxt_state;
+			state <= nxt_state;
 		end
 	end
 	
 	always @(posedge rst or posedge clk) begin
 		if(rst) begin
-			databus_reg = 8'h00;
+			databus_reg <= 8'h00;
 		end
 		else if(state == 3'b000)  begin //receive
-			databus_reg = databus; 
+			databus_reg <= databus; 
 		end
+		else begin 
+			databus_reg <= 8'hxx; //don't know what this should be.  
+		end 
 	end
 	
 	
-	always begin
+	always @ (*) begin
 		case(state)
 			3'b000: begin // receive
 				if(tbr) begin

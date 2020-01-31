@@ -29,7 +29,7 @@ module transmit_buffer
 		assign TxD = transmit_shift_reg[11];
 		assign new_char = (ioaddr == 2'b00 && ~iorw);
 		
-		assign nxt_transmit_shift_reg = (transmit_shift_reg_ready & ~transfer_buffer_ready) ? {2'h3, ^transfer_buffer, {transfer_buffer}, 1'b0}: // character in buffer non in shift reg
+		assign nxt_transmit_shift_reg = (transmit_shift_reg_ready & ~transfer_buffer_ready) ? {1'b0, {transfer_buffer},  ^transfer_buffer, 2'h3}: // character in buffer non in shift reg
 													(new_char & transmit_shift_reg_ready) ? {2'h3, ^databus, {databus}, 1'b0}:      // shift reg empty and new character
 													(enable) ? {{transmit_shift_reg[10:0]},  1'b1}: transmit_shift_reg; 
 													
@@ -41,20 +41,17 @@ module transmit_buffer
 																							  
 		assign nxt_transfer_buffer_ready = transfer_buffer_ready ? ! (new_char & !transmit_shift_reg_ready) : 
 																						 transmit_shift_reg_ready; 
-																						 
+		assign nxt_counter = (~enable) ? counter : 
+				     (counter >= 12) ? 4'b0 : counter + 1;  															 
 															
 							
 		always @(posedge clk, posedge rst) begin
 			if(rst) begin
 				counter <= 4'b0;
 			end
-			else if(enable) begin
-				if(counter >= 12) begin
-					counter <=4'b0;
-				end else begin
-					counter <= counter +1;
-				end
-			end
+			else begin 
+				counter <= nxt_counter; 
+			end 
 		end
 		
 		always @(posedge clk, posedge rst) begin
@@ -72,52 +69,5 @@ module transmit_buffer
 			end
 		end
 		
-/*		
-		reg shift_reg_ready;
-		reg tbr_reg;
-		wire new_char; 
-		wire nxt_tbr_reg; 
-		wire nxt_shift_reg_ready; 
-		reg [2:0]final_counter;
-		reg [7:0]transfer_buffer;
-		wire [7:0] nxt_transmit_shift_reg; 
-		reg [7:0]transmit_shift_reg; 
-		assign TxD = transmit_shift_reg[7];
-		
-		assign nxt_transmit_shift_reg = (ioaddr == 2'b00 && ~iorw) ? databus:
-												  (enable) 						  ? transmit_shift_reg << 1:
-												  (shift_register_ready) 	  ? transfer_buffer:
-																						 transmit_shift_reg;
-		assign tbr = (tbr_reg);
-		
-		assign nxt_shift_reg_ready = shift_reg_ready ? !tbr: 
-											 (final_counter == 3'b7);
-										
-		assign nxt_tbr_reg = 
-		
-		
-		always @(posedge clk or posedge rst) begin
-			if(rst) begin
-				final_counter = 0;
-			else if(enable) begin
-				final_counter = final_counter + 1;
-			end 
-			else begin
-				final_counter = final_counter;
-			end
-		end
-		
-		always @(posedge clk or posedge rst) begin 
-				if(rst) begin
-					transmit_shift_reg <= 8'b0;
-				end
-				else begin 
-					transmit_shift_reg <= nxt_transmit_shift_reg;
-				end	
 
-		end 
-		
-		
-		
-*/
 endmodule

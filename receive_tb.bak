@@ -1,0 +1,66 @@
+module receive_tb(); 
+
+
+	reg clk; 
+				reg rst;
+				reg enable;
+				reg iocs;
+				reg iorw;
+				reg [1:0]ioaddr;
+				reg RxD; 
+				wire [7:0]databus;
+				wire rda;
+
+	receive_buffer _vampire_receiver(
+									 .clk(clk),
+									 .rst(rst),
+									 .enable(enable),
+									 .iocs(iocs),
+									 .iorw(iorw),
+									 .ioaddr(ioaddr),
+									 .databus(databus),
+									 .RxD(RxD), 
+									 .rda(rda)
+									 );
+
+
+
+initial begin 
+
+clk = 1'b0; 
+rst = 1'b1; 
+iocs = 1'b1; 
+iorw = 1'b0; 
+ioaddr = 2'b00; 
+RxD = 1'b0; 
+enable = 1'b0; 
+
+@(posedge clk); 
+rst = 0; 
+
+@(posedge clk); 
+iorw = 1; 
+while(rda != 1) begin 
+	set_data(1); 
+	set_data(0); 
+end 
+
+end 
+
+always begin 
+	#2 clk = ~clk; 
+end 
+
+task sest_data; 
+input data; 
+begin 
+RxD = data; 
+#200; 
+@(posedge clk); 
+enable = 1; 
+@(posedge clk); 
+enable = 0; 
+end 
+endtask
+
+endmodule

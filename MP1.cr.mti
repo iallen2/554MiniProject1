@@ -1,0 +1,57 @@
+C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v {1 {vlog -work work -stats=none C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module spart
+
+Top level modules:
+	spart
+
+} {} {}} C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v {1 {vlog -work work -stats=none C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module transmit_buffer
+
+Top level modules:
+	transmit_buffer
+
+} {} {}} C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_tb {1 {vlog -work work -stats=none C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_tb
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module transmit_tb
+
+Top level modules:
+	transmit_tb
+
+} {} {}} C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_tb {1 {vlog -work work -stats=none C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_tb
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module receive_tb
+
+Top level modules:
+	receive_tb
+
+} {} {}} C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v {1 {vlog -work work -stats=none C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module driver
+
+Top level modules:
+	driver
+
+} {} {}} C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module driver_tb
+
+Top level modules:
+	driver_tb
+
+} {} {}} C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v {1 {vlog -work work -stats=none C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module lab1_spart
+
+Top level modules:
+	lab1_spart
+
+} {} {}} C:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v {1 {vlog -work work -stats=none C:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module baud_rate_generator
+
+Top level modules:
+	baud_rate_generator
+
+} {} {}}

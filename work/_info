@@ -1,0 +1,202 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+vbaud_rate_generator
+Z0 !s110 1580491103
+!i10b 1
+!s100 BYdk`L`j89NFQmOE;n[WC1
+IW5RDgIGNTY3gczN48A4XV3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/ECE_STUDENT/Documents/554MiniProject1
+Z3 w1580491063
+8C:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v
+FC:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v
+L0 2
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1580491103.000000
+!s107 C:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vdriver
+!s110 1580494277
+!i10b 1
+!s100 ik5iVJAWH2;Ui1@`0R]I11
+I=JAN;>BWn@?3WLXF]KhfL3
+R1
+R2
+w1580493204
+8C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v
+FC:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v
+Z8 L0 20
+R4
+r1
+!s85 0
+31
+!s108 1580494277.000000
+!s107 C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v|
+!i113 1
+R6
+R7
+vdriver_tb
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1580492833
+!i10b 1
+!s100 @5_gI4DZSe2>iRR_3Sk6A2
+I4D?`gB]M:]UD[zI^ghoe<2
+R1
+!s105 driver_tb_sv_unit
+S1
+R2
+w1580492823
+8C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver_tb.sv
+FC:/Users/ECE_STUDENT/Documents/554MiniProject1/driver_tb.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1580492833.000000
+!s107 C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver_tb.sv|
+!i113 1
+o-work work -sv
+R7
+vlab1_spart
+R0
+!i10b 1
+!s100 lfIc;9WQ0=VK=0C^`_6R51
+Ic3TR455Fk4OgNYedghXeV0
+R1
+R2
+R3
+8C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v
+FC:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v|
+!i113 1
+R6
+R7
+vreceive_buffer
+!s110 1580496907
+!i10b 1
+!s100 z5?`0eFmS_cbdzlCGN;`83
+IEDPm;7f8^8DFYFd:VW=1_3
+R1
+R2
+w1580496904
+8C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v
+FC:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1580496907.000000
+!s107 C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v|
+!i113 1
+R6
+R7
+vreceive_tb
+!s110 1580496556
+!i10b 1
+!s100 b1o4S_bclYa[jZ2Dm[j:J2
+Iz]7NnOQGZ]T[h<<WojPI:0
+R1
+R2
+w1580496554
+8C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_tb
+FC:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_tb
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1580496556.000000
+!s107 C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_tb|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_tb|
+!i113 1
+R6
+R7
+vspart
+R0
+!i10b 1
+!s100 Qz_d:?RJ3[Paa=iLd9kZ42
+IHGUJX;_Y>G4`ez;ILLDz:3
+R1
+R2
+R3
+8C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v
+FC:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v|
+!i113 1
+R6
+R7
+vtransmit_buffer
+!s110 1580495690
+!i10b 1
+!s100 B6226gF2=7]H83E8J;5QX1
+I:AlWEVnPd?GU0nDn<:m811
+R1
+R2
+w1580495688
+8C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v
+FC:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1580495690.000000
+!s107 C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v|
+!i113 1
+R6
+R7
+vtransmit_tb
+!s110 1580495558
+!i10b 1
+!s100 c;aEGn2:XcmnSi=M`e>FR2
+ID><e0B7]1C^Vj3LbaV?^83
+R1
+R2
+w1580495555
+8C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_tb
+FC:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_tb
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1580495558.000000
+!s107 C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_tb|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_tb|
+!i113 1
+R6
+R7
