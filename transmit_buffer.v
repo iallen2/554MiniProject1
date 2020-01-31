@@ -6,7 +6,7 @@ module transmit_buffer
 				input iocs,
 				input iorw,
 				input [1:0]ioaddr,
-				input [7:0]databus,
+				inout [7:0]databus,
 				output TxD, 
 				output tbr);
 		
@@ -29,9 +29,9 @@ module transmit_buffer
 		assign TxD = transmit_shift_reg[11];
 		assign new_char = (ioaddr == 2'b00 && ~iorw);
 		
-		assign nxt_transmit_shift_reg = (transmit_shift_reg_ready & ~transfer_buffer_ready) ? {2'h3, ^transfer_buffer, {transfer_buffer}, 0}: // character in buffer non in shift reg
-													(new_char & transmit_shift_reg_ready) ? {2'h3, ^databus, {databus}, 0}:      // shift reg empty and new character
-													(enable) ? {{transmit_shift_reg[10:0]},  1}: transmit_shift_reg; 
+		assign nxt_transmit_shift_reg = (transmit_shift_reg_ready & ~transfer_buffer_ready) ? {2'h3, ^transfer_buffer, {transfer_buffer}, 1'b0}: // character in buffer non in shift reg
+													(new_char & transmit_shift_reg_ready) ? {2'h3, ^databus, {databus}, 1'b0}:      // shift reg empty and new character
+													(enable) ? {{transmit_shift_reg[10:0]},  1'b1}: transmit_shift_reg; 
 													
 		assign nxt_transfer_buffer = (transmit_shift_reg_ready) ? 12'hfff:
 												(new_char & transfer_buffer_ready) ? databus:

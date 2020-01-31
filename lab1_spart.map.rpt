@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab1_spart
-Tue Jan 28 18:40:40 2020
+Thu Jan 30 18:24:21 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,13 +14,15 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |lab1_spart|driver:driver0|state
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
  11. General Register Statistics
- 12. Port Connectivity Checks: "spart:spart0|baud_rate_generator:_gen_baudy"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "spart:spart0|baud_rate_generator:_gen_baudy"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +48,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jan 28 18:40:40 2020       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jan 30 18:24:21 2020       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; lab1_spart                                  ;
 ; Top-level Entity Name           ; lab1_spart                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
+; Total registers                 ; 49                                          ;
 ; Total pins                      ; 106                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -162,10 +164,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -178,43 +181,50 @@ refer to the applicable agreement for further details.
 ; lab1_spart.v                     ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v          ;         ;
 ; driver.v                         ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v              ;         ;
 ; baud_rate_generator.v            ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v ;         ;
+; transmit_buffer.v                ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v     ;         ;
+; receive_buffer.v                 ; yes             ; User Verilog HDL File  ; C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v      ;         ;
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 2          ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 4          ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 0          ;
-;     -- 5 input functions                    ; 0          ;
-;     -- 4 input functions                    ; 0          ;
-;     -- <=3 input functions                  ; 4          ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 106        ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; Decoder0~0 ;
-; Maximum fan-out                             ; 7          ;
-; Total fan-out                               ; 166        ;
-; Average fan-out                             ; 0.66       ;
-+---------------------------------------------+------------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 39           ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 67           ;
+;     -- 7 input functions                    ; 0            ;
+;     -- 6 input functions                    ; 10           ;
+;     -- 5 input functions                    ; 10           ;
+;     -- 4 input functions                    ; 10           ;
+;     -- <=3 input functions                  ; 37           ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 49           ;
+;                                             ;              ;
+; I/O pins                                    ; 106          ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; KEY[0]~input ;
+; Maximum fan-out                             ; 50           ;
+; Total fan-out                               ; 577          ;
+; Average fan-out                             ; 1.59         ;
++---------------------------------------------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |lab1_spart                ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 106  ; 0            ; |lab1_spart         ; lab1_spart  ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name         ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
+; |lab1_spart                              ; 67 (4)              ; 49 (0)                    ; 0                 ; 0          ; 106  ; 0            ; |lab1_spart                                               ; lab1_spart          ; work         ;
+;    |driver:driver0|                      ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |lab1_spart|driver:driver0                                ; driver              ; work         ;
+;    |spart:spart0|                        ; 55 (0)              ; 42 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |lab1_spart|spart:spart0                                  ; spart               ; work         ;
+;       |baud_rate_generator:_gen_baudy|   ; 20 (20)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |lab1_spart|spart:spart0|baud_rate_generator:_gen_baudy   ; baud_rate_generator ; work         ;
+;       |receive_buffer:_vampire_receiver| ; 7 (7)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |lab1_spart|spart:spart0|receive_buffer:_vampire_receiver ; receive_buffer      ; work         ;
+;       |transmit_buffer:_transmit_buffy|  ; 28 (28)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |lab1_spart|spart:spart0|transmit_buffer:_transmit_buffy  ; transmit_buffer     ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -233,32 +243,34 @@ Encoding Type:  One-Hot
 +-----------+-----------+-----------+-----------+-----------+-----------+-----------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; driver:driver0|state.111              ; Lost fanout        ;
-; driver:driver0|state~4                ; Lost fanout        ;
-; driver:driver0|state~5                ; Lost fanout        ;
-; driver:driver0|state~6                ; Lost fanout        ;
-; driver:driver0|state.001              ; Lost fanout        ;
-; driver:driver0|state.000              ; Lost fanout        ;
-; driver:driver0|state.010              ; Lost fanout        ;
-; driver:driver0|state.011              ; Lost fanout        ;
-; driver:driver0|state.100              ; Lost fanout        ;
-; Total Number of Removed Registers = 9 ;                    ;
-+---------------------------------------+--------------------+
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++----------------------------------------------------+--------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal      ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------+------------------------+
+; driver:driver0|nxt_state.000_230                   ; driver:driver0|Selector4 ; yes                    ;
+; driver:driver0|nxt_state.010_220                   ; driver:driver0|Selector4 ; yes                    ;
+; driver:driver0|nxt_state.011_210                   ; driver:driver0|Selector4 ; yes                    ;
+; driver:driver0|nxt_state.100_200                   ; driver:driver0|Selector4 ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                          ;                        ;
++----------------------------------------------------+--------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                ;
-+------------------------+--------------------+------------------------------------------------------------------------------+
-; Register name          ; Reason for Removal ; Registers Removed due to This Register                                       ;
-+------------------------+--------------------+------------------------------------------------------------------------------+
-; driver:driver0|state~5 ; Lost Fanouts       ; driver:driver0|state.001, driver:driver0|state.000, driver:driver0|state.100 ;
-; driver:driver0|state~4 ; Lost Fanouts       ; driver:driver0|state.010, driver:driver0|state.011                           ;
-+------------------------+--------------------+------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                               ;
++--------------------------------------------------------------------+-----------------------------------------------------------------------------+
+; Register name                                                      ; Reason for Removal                                                          ;
++--------------------------------------------------------------------+-----------------------------------------------------------------------------+
+; spart:spart0|baud_rate_generator:_gen_baudy|baud_rate[0..15]       ; Stuck at GND due to stuck port data_in                                      ;
+; driver:driver0|databus_reg[2..7]                                   ; Stuck at GND due to stuck port data_in                                      ;
+; driver:driver0|state.111                                           ; Lost fanout                                                                 ;
+; driver:driver0|state~4                                             ; Lost fanout                                                                 ;
+; driver:driver0|state~5                                             ; Lost fanout                                                                 ;
+; driver:driver0|state~6                                             ; Lost fanout                                                                 ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transfer_buffer[3..7] ; Merged with spart:spart0|transmit_buffer:_transmit_buffy|transfer_buffer[2] ;
+; Total Number of Removed Registers = 31                             ;                                                                             ;
++--------------------------------------------------------------------+-----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -266,24 +278,62 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 49    ;
+; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 49    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 19    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "spart:spart0|baud_rate_generator:_gen_baudy"                                                                                                         ;
-+----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                          ;
-+----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; data_bus ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "data_bus[7..1]" will be connected to GND. ;
-; enable   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                              ;
-+----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                    ;
++-----------------------------------------------------------------------+---------+
+; Inverted Register                                                     ; Fan out ;
++-----------------------------------------------------------------------+---------+
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[11]   ; 2       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[10]   ; 1       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transfer_buffer_ready    ; 9       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg_ready ; 10      ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[9]    ; 1       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transfer_buffer[1]       ; 2       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transfer_buffer[0]       ; 2       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[8]    ; 1       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[7]    ; 1       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transfer_buffer[2]       ; 1       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[6]    ; 1       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[5]    ; 1       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[4]    ; 1       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[3]    ; 1       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[2]    ; 1       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[1]    ; 1       ;
+; spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[0]    ; 2       ;
+; Total number of inverted registers = 17                               ;         ;
++-----------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |lab1_spart|spart:spart0|receive_buffer:_vampire_receiver|counter[3]            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |lab1_spart|spart:spart0|transmit_buffer:_transmit_buffy|transfer_buffer[1]     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |lab1_spart|spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[11] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |lab1_spart|spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[8]  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |lab1_spart|spart:spart0|transmit_buffer:_transmit_buffy|transmit_shift_reg[9]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "spart:spart0|baud_rate_generator:_gen_baudy"                                                                                                        ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                          ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; data_bus ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "data_bus[7..1]" will be connected to GND. ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -291,16 +341,26 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
+; arriav_ff             ; 49                          ;
+;     CLR               ; 14                          ;
+;     CLR SCLR          ; 16                          ;
+;     ENA CLR           ; 19                          ;
 ; arriav_io_obuf        ; 36                          ;
-; arriav_lcell_comb     ; 11                          ;
-;     normal            ; 11                          ;
+; arriav_lcell_comb     ; 74                          ;
+;     arith             ; 16                          ;
+;         1 data inputs ; 16                          ;
+;     normal            ; 58                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 4                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 10                          ;
+;         5 data inputs ; 10                          ;
+;         6 data inputs ; 10                          ;
 ; boundary_port         ; 106                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 0.37                        ;
+; Max LUT depth         ; 2.50                        ;
+; Average LUT depth     ; 1.38                        ;
 +-----------------------+-----------------------------+
 
 
@@ -319,7 +379,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Jan 28 18:40:31 2020
+    Info: Processing started: Thu Jan 30 18:24:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab1_spart -c lab1_spart
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -333,14 +393,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file baud_ra
     Info (12023): Found entity 1: baud_rate_generator File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file transmit_buffer.v
     Info (12023): Found entity 1: transmit_buffer File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file receive_buffer.v
+    Info (12023): Found entity 1: receive_buffer File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at spart.v(38): created implicit net for "data_bus" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at receive_buffer.v(49): created implicit net for "data_bus" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v Line: 49
 Info (12127): Elaborating entity "lab1_spart" for the top level hierarchy
 Info (12128): Elaborating entity "spart" for hierarchy "spart:spart0" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 71
-Warning (10034): Output port "rda" at spart.v(25) has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 25
-Warning (10034): Output port "tbr" at spart.v(26) has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 26
-Warning (10034): Output port "txd" at spart.v(29) has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 29
-Info (12128): Elaborating entity "baud_rate_generator" for hierarchy "spart:spart0|baud_rate_generator:_gen_baudy" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 41
-Warning (10230): Verilog HDL assignment warning at baud_rate_generator.v(22): truncated value with size 32 to match size of target (16) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v Line: 22
+Info (12128): Elaborating entity "baud_rate_generator" for hierarchy "spart:spart0|baud_rate_generator:_gen_baudy" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 43
+Warning (10230): Verilog HDL assignment warning at baud_rate_generator.v(24): truncated value with size 32 to match size of target (16) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/baud_rate_generator.v Line: 24
+Info (12128): Elaborating entity "transmit_buffer" for hierarchy "spart:spart0|transmit_buffer:_transmit_buffy" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 55
+Warning (10230): Verilog HDL assignment warning at transmit_buffer.v(36): truncated value with size 12 to match size of target (8) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v Line: 36
+Warning (10230): Verilog HDL assignment warning at transmit_buffer.v(55): truncated value with size 32 to match size of target (4) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v Line: 55
+Warning (10230): Verilog HDL assignment warning at transmit_buffer.v(63): truncated value with size 12 to match size of target (8) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/transmit_buffer.v Line: 63
+Info (12128): Elaborating entity "receive_buffer" for hierarchy "spart:spart0|receive_buffer:_vampire_receiver" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/spart.v Line: 67
+Warning (10036): Verilog HDL or VHDL warning at receive_buffer.v(49): object "data_bus" assigned a value but never read File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v Line: 49
+Warning (10230): Verilog HDL assignment warning at receive_buffer.v(19): truncated value with size 32 to match size of target (4) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v Line: 19
+Warning (10230): Verilog HDL assignment warning at receive_buffer.v(49): truncated value with size 12 to match size of target (1) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/receive_buffer.v Line: 49
 Info (12128): Elaborating entity "driver" for hierarchy "driver:driver0" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 83
 Warning (10230): Verilog HDL assignment warning at driver.v(41): truncated value with size 32 to match size of target (16) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 41
 Info (10264): Verilog HDL Case Statement information at driver.v(82): all case item expressions in this case statement are onehot File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
@@ -349,7 +417,18 @@ Info (10041): Inferred latch for "nxt_state.100" at driver.v(82) File: C:/Users/
 Info (10041): Inferred latch for "nxt_state.011" at driver.v(82) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
 Info (10041): Inferred latch for "nxt_state.010" at driver.v(82) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
 Info (10041): Inferred latch for "nxt_state.000" at driver.v(82) File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "databus[0]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[1]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[2]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[3]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[4]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[5]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[6]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
+    Warning (13049): Converted tri-state buffer "databus[7]" feeding internal logic into a wire File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 42
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[3]" and its non-tri-state driver. File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO[5]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
     Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
@@ -386,8 +465,12 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO[33]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
     Warning (13040): bidirectional pin "GPIO[34]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
     Warning (13040): bidirectional pin "GPIO[35]" has no driver File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
-Warning (13032): The following tri-state nodes are fed by constants
-    Warning (13033): The pin "GPIO[3]" is fed by GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
+Warning (13012): Latch driver:driver0|nxt_state.000_230 has unsafe behavior File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal driver:driver0|state.010 File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 32
+Warning (13012): Latch driver:driver0|nxt_state.011_210 has unsafe behavior File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 82
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal driver:driver0|state.000 File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/driver.v Line: 32
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "GPIO[3]~synth" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 33
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 15
     Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 15
@@ -424,13 +507,12 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
     Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
     Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
-    Warning (13410): Pin "LEDR[8]" is stuck at VCC File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
 Info (286030): Timing-Driven Synthesis is running
 Warning (14632): Output pin "LEDR[9]" driven by bidirectional pin "GPIO[5]" cannot be tri-stated File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 26
-Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 15 input pin(s) that do not drive logic
+Warning (21074): Design contains 14 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 10
     Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 11
     Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 12
@@ -445,16 +527,15 @@ Warning (21074): Design contains 15 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 29
     Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 29
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 29
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/ECE_STUDENT/Documents/554MiniProject1/lab1_spart.v Line: 9
-Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 181 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 52 output pins
     Info (21060): Implemented 36 bidirectional pins
-    Info (21061): Implemented 4 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 101 warnings
-    Info: Peak virtual memory: 4847 megabytes
-    Info: Processing ended: Tue Jan 28 18:40:40 2020
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:17
+    Info (21061): Implemented 75 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 118 warnings
+    Info: Peak virtual memory: 4875 megabytes
+    Info: Processing ended: Thu Jan 30 18:24:21 2020
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

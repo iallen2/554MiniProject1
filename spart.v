@@ -35,10 +35,37 @@ module spart(
 	 baud_rate_generator _gen_baudy(
 									.rst(rst), 
 									.clk(clk), 
-									.data_bus(data_bus), 
+									.data_bus(data_bus),
+									.iocs(iocs), 
+									.iorw(iorw), 
 									.ioaddr(ioaddr),
 									.enable(enable)
 									);
+									
+	transmit_buffer _transmit_buffy(
+									 .clk(clk),
+									 .rst(rst),
+									 .enable(enable),
+									 .iocs(iocs),
+									 .iorw(iorw),
+									 .ioaddr(ioaddr),
+									 .databus(databus),
+									 .TxD(txd), 
+									 .tbr(tbr)
+									 );
+				 
+	receive_buffer _vampire_receiver(
+									 .clk(clk),
+									 .rst(rst),
+									 .enable(enable),
+									 .iocs(iocs),
+									 .iorw(iorw),
+									 .ioaddr(ioaddr),
+									 .databus(databus),
+									 .RxD(txd), 
+									 .rda(rda)
+									 );
+	
 
 
 endmodule
