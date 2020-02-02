@@ -35,7 +35,7 @@ module spart(
 	 baud_rate_generator _gen_baudy(
 									.rst(rst), 
 									.clk(clk), 
-									.data_bus(data_bus),
+									.data_bus(databus),
 									.iocs(iocs), 
 									.iorw(iorw), 
 									.ioaddr(ioaddr),
@@ -62,7 +62,7 @@ module spart(
 									 .iorw(iorw),
 									 .ioaddr(ioaddr),
 									 .databus(databus),
-									 .RxD(txd), 
+									 .RxD(rxd), 
 									 .rda(rda)
 									 );
 	

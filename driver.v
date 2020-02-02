@@ -49,7 +49,7 @@ module driver(
 	assign iorw = (state == 3'b000 || state == 3'b010);
 	
 	assign ioaddr  =   (state == 3'b001) ? 2'b11: // db high
-							 (state == 3'b111) ? 2'b10: // db low
+							 (state == 3'b100) ? 2'b10: // db low
 							 (state == 3'b010) ? 2'b01: // status register?
 						      						2'b00; // transmit buffer/receive buffer
 														
@@ -76,7 +76,7 @@ module driver(
 			databus_reg <= databus; 
 		end
 		else begin 
-			databus_reg <= 8'hxx; //don't know what this should be.  
+			databus_reg <= 8'h00; //don't know what this should be.  
 		end 
 	end
 	

@@ -29,7 +29,7 @@ module receive_buffer
 
 		
 
-		assign nxt_counter = (done)  ? 4'h0: 
+		assign nxt_counter = (~receiving_character & enable)  ? 4'h0: 
 				     (enable)? counter + 1: 
 					       counter;
 
@@ -67,7 +67,7 @@ module receive_buffer
 				receive_shift_reg <= 12'hfff;
 				receiving_character <= 1'b0; 
 				receive_shift_reg <= 12'h000;
-			   receive_buffer <= 8'h00;
+			   	receive_buffer <= 8'h00;
 				char_in_buffer <= 1'b0; 
 			end
 			else begin
