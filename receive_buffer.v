@@ -18,14 +18,14 @@ module receive_buffer
 		wire [3:0]nxt_counter;
 		reg receiving_character;
 		wire nxt_receiving_character;
-		reg [11:0]receive_shift_reg;
-		wire [11:0]nxt_receive_shift_reg;
+		reg [9:0]receive_shift_reg;
+		wire [9:0]nxt_receive_shift_reg;
 		reg[7:0] receive_buffer; 
 		wire[7:0] nxt_receive_buffer; 
 		reg char_in_buffer;
 		wire nxt_char_in_buffer;
 
-		assign done = counter >= 12;	
+		assign done = counter >= 10;	
 
 		
 
@@ -34,13 +34,13 @@ module receive_buffer
 					       counter;
 
 		
-		assign nxt_receiving_character = (receiving_character) ? counter < 12 : ~RxD;
+		assign nxt_receiving_character = (receiving_character) ? counter < 10 : ~RxD;
 		
 
-		assign nxt_receive_shift_reg = (receiving_character & enable) ? {receive_shift_reg[10:0], RxD}
+		assign nxt_receive_shift_reg = (receiving_character & enable) ? {receive_shift_reg[8:0], RxD}
 									      : receive_shift_reg;
 
-		assign nxt_receive_buffer = (done) ? receive_shift_reg[10:3]: receive_buffer;
+		assign nxt_receive_buffer = (done) ? receive_shift_reg[8:1]: receive_buffer;
 				
 	   
 
@@ -64,9 +64,9 @@ module receive_buffer
 	
 		always @(posedge clk, posedge rst) begin
 			if(rst) begin
-				receive_shift_reg <= 12'hfff;
+				receive_shift_reg <= 10'hfff;
 				receiving_character <= 1'b0; 
-				receive_shift_reg <= 12'h000;
+				receive_shift_reg <= 10'h000;
 			   	receive_buffer <= 8'h00;
 				char_in_buffer <= 1'b0; 
 			end

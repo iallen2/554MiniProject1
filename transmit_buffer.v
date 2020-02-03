@@ -20,29 +20,27 @@ module transmit_buffer
 		wire nxt_transfer_buffer_ready;
 		
 		
-		reg [11:0]transmit_shift_reg;
+		reg [9:0]transmit_shift_reg;
 		reg [7:0]transfer_buffer;
-		wire [11:0]nxt_transmit_shift_reg;
+		wire [9:0]nxt_transmit_shift_reg;
 		wire [7:0]nxt_transfer_buffer;
 		
 		assign tbr = transfer_buffer_ready | transmit_shift_reg_ready;
-		assign TxD = transmit_shift_reg[11];
+		assign TxD = transmit_shift_reg[9];
 		assign new_char = (ioaddr == 2'b00 && ~iorw);
 		
-		assign nxt_transmit_shift_reg = (transmit_shift_reg_ready & ~transfer_buffer_ready) ? {1'b0, {transfer_buffer},  ^transfer_buffer, 2'h3}: // character in buffer non in shift reg
-													(new_char & transmit_shift_reg_ready) ? {2'h3, ^databus, {databus}, 1'b0}:      // shift reg empty and new character
-													(enable) ? {{transmit_shift_reg[10:0]},  1'b1}: transmit_shift_reg; 
+		assign nxt_transmit_shift_reg = (transmit_shift_reg_ready & ~transfer_buffer_ready) ? {1'b0, {transfer_buffer}, 1'h1}: // character in buffer non in shift reg
+								(new_char & transmit_shift_reg_ready) ? {1'h1, {databus}, 1'b0}:      // shift reg empty and new character (TODO: why shift in this direction?)
+								(enable) ? {{transmit_shift_reg[8:0]},  1'b1}: transmit_shift_reg;  
 													
-		assign nxt_transfer_buffer = (transmit_shift_reg_ready) ? 12'hfff:
-												(new_char & transfer_buffer_ready) ? databus:
-																								 12'hfff;
-		assign nxt_transmit_shift_reg_ready = transmit_shift_reg_ready ? ! (new_char | !transfer_buffer_ready) : 
-																							  counter == 12; 
+		assign nxt_transfer_buffer = (new_char) ? databus: transfer_buffer;
+
+		assign nxt_transmit_shift_reg_ready = transmit_shift_reg_ready ? (transfer_buffer_ready) : 
+									 counter == 10; 
 																							  
-		assign nxt_transfer_buffer_ready = transfer_buffer_ready ? ! (new_char & !transmit_shift_reg_ready) : 
-																						 transmit_shift_reg_ready; 
+		assign nxt_transfer_buffer_ready = transfer_buffer_ready ? !new_char: transmit_shift_reg_ready; 
 		assign nxt_counter = (~enable) ? counter : 
-				     (counter >= 12) ? 4'b0 : counter + 1;  															 
+				     (counter >= 10) ? 4'b0 : counter + 1;  															 
 															
 							
 		always @(posedge clk, posedge rst) begin
@@ -56,8 +54,8 @@ module transmit_buffer
 		
 		always @(posedge clk, posedge rst) begin
 			if(rst) begin
-				transmit_shift_reg <= 12'hfff;
-				transfer_buffer <= 12'hfff;
+				transmit_shift_reg <= 10'hfff;
+				transfer_buffer <= 10'hfff;
 				transmit_shift_reg_ready <= 1'b1; 
 				transfer_buffer_ready <= 1'b1; 
 			end
