@@ -25,13 +25,13 @@ module receive_buffer
 		reg char_in_buffer;
 		wire nxt_char_in_buffer;
 
-		assign done = counter >= 10;	
+		assign done = counter >= 10; // signal is ready once 10 bits have been received
 
 		
 
-		assign nxt_counter = (~receiving_character )  ? 4'h0: 
-				     (enable)? counter + 1: 
-					       counter;
+		assign nxt_counter = (~receiving_character ) ? 4'h0: // no new character wait on next bit
+				               (enable)                ? counter + 1: // each bit takes one enable cycle
+					                                      counter;
 
 		
 		assign nxt_receiving_character = (receiving_character) ? counter < 10 : ~RxD;
