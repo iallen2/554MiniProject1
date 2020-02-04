@@ -1,13 +1,13 @@
 module spart_tb(); 
 
-	reg clk; 
-				reg rst;
-				wire iocs;
-				wire iorw;
-				wire [1:0]ioaddr;
-				reg rxd; 
-				wire [7:0]databus;
-				wire rda;
+reg clk; 
+reg rst;
+wire iocs;
+wire iorw;
+wire [1:0]ioaddr;
+reg rxd; 
+wire [7:0]databus;
+wire rda;
 wire tbr; 
 wire txd; 
 reg [1:0] cfg; 
@@ -40,34 +40,26 @@ driver driver0( .clk(clk),
 
 initial begin 
 
-clk = 1'b0; 
-rst = 1'b1;  
-rxd = 1'b0;  
-cfg = 2'b11; 
+	clk = 1'b0; 
+	rst = 1'b1;  
+	rxd = 1'b1;
+	cfg = 2'b11; //set baudrate as 38400 
 
-@(posedge clk); 
-rst = 0;
-rxd = 1'b1;  
-#200; 
+	@(posedge clk); 
+	rst = 0; //turn off reset. 
+	#200; 
 
+	//Send two chars with delay inbetween. 
+	put_char(8'h68);
+	#200; 
+	put_char(8'hAA); 
+	#200; 
 
-@(posedge clk); 
+	//send two chars back to back
+	put_char(8'hBB); 
+	put_char(8'h81);
 
-put_char(8'h68);
-#200; 
-
-/*for(int i = 0; i < 8; i ++) begin 
-put_char(8'h68);
-#200; 
-end */
-
-
-while(rda != 1) begin 
-	set_data(1); 
-	set_data(0); 
-end 
-
-
+	//manually check wave form to make sure TXD is behaving appropiately. && checked Putty. 
 end 
 
 always begin 
@@ -75,23 +67,18 @@ always begin
 end 
 
 task put_char;
-input [7:0]char;
-begin
-set_data(0);
-for(int i = 0; i < 8; i++) begin
-set_data(char[7-i]);
-end
-set_data(1);
-end
+	input [7:0]char;
+
+	rxd = 0; //start bit 
+	#328; //time to wait for baud rate 38400
+	for(int i = 0; i < 8; i++) begin
+		rxd = char[7-i]; 
+		#328;
+	end
+	rxd = 1; //stop bit
+	#328; 
+
 endtask
 
-task set_data; 
-input data; 
-begin 
-rxd = data; 
-#328;
-@(posedge clk); 
-end 
-endtask
 
 endmodule

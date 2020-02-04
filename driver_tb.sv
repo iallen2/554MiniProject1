@@ -21,21 +21,33 @@ driver DUT(.clk(clk),
 	   .databus(databus)); 
 
 initial begin 
-clk = 1'b0; 
-rst = 1'b1; 
-br_cfg = 2'b00; 
-rda = 1'b0; 
-tbr = 1'b1;
+	clk = 1'b0; 
+	rst = 1'b1; 
+	br_cfg = 2'b00; 
+	rda = 1'b0; 
+	tbr = 1'b1;
 
-#15
-rst = 1'b0; 
+	#5; //turn off reset. 
+	rst = 1'b0; 
 
-//should set baudrate
-#50; 
-rda = 1'b1; 
+	#50;//wait for baudrate to be set.  
+	rda = 1'b1; 
+	#10;
+	rda = 1'b0;  
 
-$stop; 
+	//next clock cycle, signals should be set to read receive buffer 
+	//next clock cycle, signals should be set to write transmit buffer
+	//back to idle!
+	
 
+	#50; //wait
+	tbr = 1'b0; // see if driver waits for tbr. 
+	rda = 1'b1;
+	#10; // signals should be set to read receive buffer
+	#10; // should be waiting in receive
+	tbr = 1'b1; 
+	// now should write transmit buffer 
+	
 end 
 
 always begin 
