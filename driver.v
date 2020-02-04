@@ -42,7 +42,7 @@ module driver(
 	assign db = (br_cfg == 2'b00) ? 680: // baud rate: 4800
 					(br_cfg == 2'b01) ? 339: // baud rate: 9600
 					(br_cfg == 2'b10) ? 170: // baud rate: 19200
-					                     85; // baud rate: 38400 //is good 
+					                     85; // baud rate: 38400 
 	
 	assign db_high = db[15:8];
 	assign db_low = db[7:0];
@@ -51,7 +51,7 @@ module driver(
 	
 	assign ioaddr  =   (state == 3'b001) ? 2'b11: // db high
 							 (state == 3'b100) ? 2'b10: // db low
-							 (state == 3'b010) ? 2'b01: // status register?
+							 (state == 3'b010) ? 2'b01: // status register
 						      						2'b00; // transmit buffer/receive buffer
 														
 	assign databus = (state == 3'b001) ? db_high: // db high
@@ -77,7 +77,7 @@ module driver(
 			databus_reg <= databus; 
 		end
 		else begin 
-			databus_reg <= 8'h00; //don't know what this should be.  
+			databus_reg <= 8'h00;  
 		end 
 	end
 	

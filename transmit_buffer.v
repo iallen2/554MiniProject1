@@ -30,17 +30,21 @@ module transmit_buffer
 		assign new_char = (ioaddr == 2'b00 && ~iorw);
 		
 		assign nxt_transmit_shift_reg = (transmit_shift_reg_ready & ~transfer_buffer_ready) ? {1'b0, {transfer_buffer}, 1'h1}: // character in buffer non in shift reg
-								(new_char & transmit_shift_reg_ready) ? {1'h1, {databus}, 1'b0}:      // shift reg empty and new character (TODO: why shift in this direction?)
-								(enable) ? {{transmit_shift_reg[8:0]},  1'b1}: transmit_shift_reg;  
+												  (new_char & transmit_shift_reg_ready) ? {1'h1, {databus}, 1'b0}:      // shift reg empty and new character (TODO: why shift in this direction?)
+												  (enable) ? 										{{transmit_shift_reg[8:0]},  1'b1}: 
+																										transmit_shift_reg;  
 													
-		assign nxt_transfer_buffer = (new_char) ? databus: transfer_buffer;
+		assign nxt_transfer_buffer = (new_char) ? databus: 
+																transfer_buffer;
 
 		assign nxt_transmit_shift_reg_ready = transmit_shift_reg_ready ? (transfer_buffer_ready) : 
-									 counter == 10; 
+																							  counter == 10; 
 																							  
-		assign nxt_transfer_buffer_ready = transfer_buffer_ready ? !new_char: transmit_shift_reg_ready; 
-		assign nxt_counter = (~enable) ? counter : 
-				     (counter >= 10) ? 4'b0 : counter + 1;  															 
+		assign nxt_transfer_buffer_ready = transfer_buffer_ready ? !new_char: 
+																					  transmit_shift_reg_ready; 
+		assign nxt_counter = (~enable)       ? counter : 
+									(counter >= 10) ? 4'b0 : 
+															counter + 1;  															 
 															
 							
 		always @(posedge clk, posedge rst) begin
