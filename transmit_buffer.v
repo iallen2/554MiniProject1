@@ -25,7 +25,7 @@ module transmit_buffer
 		wire [9:0]nxt_transmit_shift_reg;
 		wire [7:0]nxt_transfer_buffer;
 		
-		assign tbr = transfer_buffer_ready | transmit_shift_reg_ready;
+		assign tbr = transfer_buffer_ready;
 		assign TxD = transmit_shift_reg[9];
 		assign new_char = (ioaddr == 2'b00 && ~iorw);
 		

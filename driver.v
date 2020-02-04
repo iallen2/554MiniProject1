@@ -35,13 +35,14 @@ module driver(
 	wire [15:0]db;
 	wire [7:0]db_high;
 	wire [7:0]db_low;
+
 	
 	assign iocs = 1'b1;
 	
-	assign db = (br_cfg == 2'b00) ? 651: // baud rate: 4800
-					(br_cfg == 2'b01) ? 325: // baud rate: 9600
-					(br_cfg == 2'b10) ? 163: // baud rate: 19200
-											   82; // baud rate: 38400
+	assign db = (br_cfg == 2'b00) ? 680: // baud rate: 4800
+					(br_cfg == 2'b01) ? 339: // baud rate: 9600
+					(br_cfg == 2'b10) ? 170: // baud rate: 19200
+					                     85; // baud rate: 38400 //is good 
 	
 	assign db_high = db[15:8];
 	assign db_low = db[7:0];

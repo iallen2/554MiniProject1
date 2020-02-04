@@ -52,52 +52,20 @@ rxd = 1'b1;
 
 
 @(posedge clk); 
-#100;
-set_data(0);
-set_data(0);
-set_data(1);
-set_data(0);
-set_data(1);
-set_data(0);
-set_data(1);
-set_data(0);
-set_data(1);
-#1000;
-set_data(0);
-set_data(0);
-set_data(1);
-set_data(0);
-set_data(1);
-set_data(0);
-set_data(1);
-set_data(0);
-set_data(1);
-#1000;
-set_data(0);
-set_data(0);
-set_data(1);
-set_data(0);
-set_data(1);
-set_data(0);
-set_data(1);
-set_data(1);
-set_data(1);
-#1000;
-set_data(0);
-set_data(0);
-set_data(1);
-set_data(0);
-set_data(1);
-set_data(0);
-set_data(1);
-set_data(0);
-set_data(1);
-#1000;
+
+put_char(8'h68);
+#200; 
+
+/*for(int i = 0; i < 8; i ++) begin 
+put_char(8'h68);
+#200; 
+end */
+
+
 while(rda != 1) begin 
 	set_data(1); 
 	set_data(0); 
 end 
-
 
 
 end 
@@ -105,6 +73,17 @@ end
 always begin 
 	#2 clk = ~clk; 
 end 
+
+task put_char;
+input [7:0]char;
+begin
+set_data(0);
+for(int i = 0; i < 8; i++) begin
+set_data(char[7-i]);
+end
+set_data(1);
+end
+endtask
 
 task set_data; 
 input data; 

@@ -29,7 +29,7 @@ module receive_buffer
 
 		
 
-		assign nxt_counter = (~receiving_character & enable)  ? 4'h0: 
+		assign nxt_counter = (~receiving_character )  ? 4'h0: 
 				     (enable)? counter + 1: 
 					       counter;
 
@@ -48,7 +48,7 @@ module receive_buffer
 		assign rda = char_in_buffer; 
 		
 
-		assign databus = (iorw == 1'b1 && ioaddr == 2'b00) ? receive_shift_reg : 8'hzz; 
+		assign databus = (iorw == 1'b1 && ioaddr == 2'b00) ? receive_buffer: 8'hzz; 
 		
 
 		always @(posedge clk, posedge rst) begin
